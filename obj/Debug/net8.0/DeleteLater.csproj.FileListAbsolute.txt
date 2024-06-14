@@ -1,0 +1,14 @@
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.AssemblyInfo.cs
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\DeleteLater\bin\Debug\net8.0\DeleteLater.exe
+C:\Users\USER\Desktop\DeleteLater\bin\Debug\net8.0\DeleteLater.deps.json
+C:\Users\USER\Desktop\DeleteLater\bin\Debug\net8.0\DeleteLater.runtimeconfig.json
+C:\Users\USER\Desktop\DeleteLater\bin\Debug\net8.0\DeleteLater.dll
+C:\Users\USER\Desktop\DeleteLater\bin\Debug\net8.0\DeleteLater.pdb
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.dll
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\refint\DeleteLater.dll
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.pdb
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.genruntimeconfig.cache
+C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\ref\DeleteLater.dll
