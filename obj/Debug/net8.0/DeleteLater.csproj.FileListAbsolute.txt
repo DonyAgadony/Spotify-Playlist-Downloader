@@ -12,3 +12,18 @@ C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\refint\DeleteLater.dll
 C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.pdb
 C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\DeleteLater.genruntimeconfig.cache
 C:\Users\USER\Desktop\DeleteLater\obj\Debug\net8.0\ref\DeleteLater.dll
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.AssemblyInfoInputs.cache
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.AssemblyInfo.cs
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.csproj.CoreCompileInputs.cache
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.sourcelink.json
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.dll
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\refint\DeleteLater.dll
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.pdb
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\bin\Debug\net8.0\DeleteLater.exe
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\bin\Debug\net8.0\DeleteLater.deps.json
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\bin\Debug\net8.0\DeleteLater.runtimeconfig.json
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\bin\Debug\net8.0\DeleteLater.dll
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\bin\Debug\net8.0\DeleteLater.pdb
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\DeleteLater.genruntimeconfig.cache
+C:\Users\donyb\Desktop\Handasat Tochna\API-test\obj\Debug\net8.0\ref\DeleteLater.dll
