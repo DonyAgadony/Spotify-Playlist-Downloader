@@ -3,17 +3,50 @@ using System.Net.Mime;
 using System.Text.Json.Nodes;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Google.Apis.YouTube.v3;
+using Google.Apis.Services;
 
 class Program
 {
     static async Task Main()
     {
-        string link = GetId("https://open.spotify.com/track/7lwBfnN8IVlP6WW702pGH0?si=a9282604306b415e");
-        await MakeARequest();
-        Console.ReadKey();
+        var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+        {
+            ApiKey = "AIzaSyAKzeo5aqxu0c9OxZ7qSN-hYQzaZ31s41Y",
+            ApplicationName = "Playtify"
+        });
+
+        var searchListRequest = youtubeService.Search.List("snippet");
+        searchListRequest.Q = "Crazy Frog";
+        searchListRequest.MaxResults = 50;
+
+        var searchListResponse = await searchListRequest.ExecuteAsync();
+
+        foreach (var searchResult in searchListResponse.Items)
+        {
+
+            searchResult.
+            switch (searchResult.Id.Kind)
+            {
+                case "youtube#video":
+                    Console.WriteLine(searchResult.Snippet.Title + " | " + searchResult.Id.VideoId);
+                    break;
+
+                case "youtube#channel":
+                    Console.WriteLine(searchResult.Snippet.Title + " | " + searchResult.Id.ChannelId);
+                    break;
+
+                case "youtube#playlist":
+                    Console.WriteLine(searchResult.Snippet.Title + " | " + searchResult.Id.PlaylistId);
+                    break;
+            }
+        }
+
+        // string link = GetId("https://open.spotify.com/track/7lwBfnN8IVlP6WW702pGH0?si=a9282604306b415e");
+        // MakeASpotifyRequest().Wait();
     }
 
-    static async Task MakeARequest()
+    static async Task MakeASpotifyRequest()
     {
         var client = new HttpClient();
 
@@ -30,15 +63,15 @@ class Program
         request.Content = new FormUrlEncodedContent(Data);
 
         var response = await client.SendAsync(request);
-        string path = @"C:\Users\donyb\Desktop\Handasat Tochna\API-test\index.html";
+        string path = @".\index.html";
         File.WriteAllText(path, await response.Content.ReadAsStringAsync());
         var responseJson = await response.Content.ReadAsStringAsync();
-        var tokenResponse = JsonSerializer.Deserialize<TokenResponse>(responseJson)!;
+        var tokenResponse = JsonSerializer.Deserialize<TokenResponseSpotify>(responseJson)!;
 
 
         // Use the access token to make authenticated requests
 #pragma warning disable CS8604 // Possible null reference argument.
-        await GetTrackInfo(tokenResponse.AccessToken, GetId("https://open.spotify.com/track/0LgOdrf5gtT4Q4lAgYABlC?si=19267a58568b4d12"));
+        await GetTrackInfo(tokenResponse.AccessToken, GetId("https://" + "open.spotify.com" + "/track/0LgOdrf5gtT4Q4lAgYABlC?si=19267a58568b4d12"));
 #pragma warning restore CS8604 // Possible null reference argument.
 
         await GetPlaylistInfo(tokenResponse.AccessToken, GetId("https://open.spotify.com/playlist/6MGrEDCs915admcjWJJ6hf?si=538a4cd97ab94933"));
@@ -61,7 +94,7 @@ class Program
         var responseJson = await response.Content.ReadAsStringAsync();
         var track = JsonSerializer.Deserialize<Track>(responseJson);
 
-        File.WriteAllText(@"C:\Users\donyb\Desktop\Handasat Tochna\API-test\TrackInfo.txt", responseJson);
+        File.WriteAllText(@".\TrackInfo.txt", responseJson);
 
 
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
@@ -78,7 +111,7 @@ class Program
         var responseJson = await response.Content.ReadAsStringAsync();
         var playlist = JsonSerializer.Deserialize<Playlist>(responseJson);
 
-        File.WriteAllText(@"C:\Users\donyb\Desktop\Handasat Tochna\API-test\PlaylistInfo.txt", responseJson);
+        File.WriteAllText(@".\PlaylistInfo.txt", responseJson);
 
 
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
@@ -91,10 +124,25 @@ class Program
         Console.WriteLine($"Playlist First Track: {playlist.tracks.items[0].track.name}");
 #pragma warning restore CS8602 // Dereference of a possibly null reference.
     }
+
+    // public static async Task MakeAYoutubeRequest()
+    // {
+    //     var client = new HttpClient();
+    //     var APIKey = File.ReadLines(@".\secrets.txt").Skip(2).First();
+    //     var request = new HttpRequestMessage(HttpMethod.Get, $"https://accounts.google.com/o/oauth2/v2/auth");
+    // }
+    // public static async Task SearchAVideoYoutube(string accessToken)
+    // {
+    //     var client = new HttpClient();
+    //     var APIKey = File.ReadLines(@".\secrets.txt").Skip(2).First();
+    //     var request = new HttpRequestMessage(HttpMethod.Post, $"https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key={APIKey}");
+
+    // }
+
 }
 
 
-public class TokenResponse
+public class TokenResponseSpotify
 {
     [JsonPropertyName("access_token")]
     public string? AccessToken { get; set; }

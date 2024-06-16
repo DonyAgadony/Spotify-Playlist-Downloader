@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "WSH1nCtLWCr6jlcei0x2N59q13cvy2AoIFybol0SX9cZhCt+jCffGZTkECGk/usMCk88L39Y2bDWsJPOug8POA==",
+  "dgSpecHash": "dd10plS99b4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\donyb\\Desktop\\Handasat Tochna\\API-test\\DeleteLater.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\DeleteLater\\DeleteLater.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\google.apis\\1.68.0\\google.apis.1.68.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\google.apis.auth\\1.68.0\\google.apis.auth.1.68.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\google.apis.core\\1.68.0\\google.apis.core.1.68.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\google.apis.youtube.v3\\1.68.0.3421\\google.apis.youtube.v3.1.68.0.3421.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
