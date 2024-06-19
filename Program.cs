@@ -25,7 +25,6 @@ class Program
         foreach (var searchResult in searchListResponse.Items)
         {
 
-            searchResult.
             switch (searchResult.Id.Kind)
             {
                 case "youtube#video":
